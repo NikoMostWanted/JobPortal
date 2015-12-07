@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+{% block body %}
+    {% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+    <div class="meta" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        <div class="metalinks">
+            {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+        </div>
+    </div>
+    <div id="header">
+        {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+        <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28"/></a>
+        {% endimage %}
+        <span class="slogan">Your Key to Success</span>
+        {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+        <ul id="menu">
+            <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+        </ul>
+        {% endimage %}
+        <div class="localization">
+            {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+            {% endimage %}
+        </div>
+        <div class="option">
+        {% set i = 0 %}
+        {% for items in link %}
+            <a style="text-decoration: none; color: blue" target="_blank"
+               onclick="window.open(this.href,this.target,'width= 800,height=600,scrollbars=1');return false;"
+               href="http://ua.jobrapido.com/{{ items.href }}">
+                <center><div class="blok">
+                    <p>{{ top_date[i] }}</p><br/>
+                    <span>{{ town[i] }}</span><br/>
+                    <span>{{ company[i] }}</span><br/>
+
+                    <h2>{{ result_title[i] }}</h2><br/>
+                </div></center>
+            </a><br/>
+            {% set i = i + 1 %}
+        {% else %}
+            Not found
+        {% endfor %}
+        {% for items in pagination_item %}
+            <a style="text-decoration: none; color: blue" href="answerVacation?job={{ job }}&where={{ where }}&distance={{ distance }}&page={{ items }}"> {{ items }}</a>
+        {% endfor %}
+        </div>
+    </div>
+    {% block javascripts %}{% endblock %}
+    {% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+    <div id="footer" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        Copyright &copy;. All rights reserved. Design by <a href="https://vk.com/active_11">Neymar</a> and <a
+                href="https://vk.com/id135256716"> Niko</a>
+    </div>
+{% endblock %}
+</body>
+</html>

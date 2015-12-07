@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}
+    {% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+    <div class="meta" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        <div class="metalinks">
+            {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+        </div>
+    </div>
+    <div id="header">
+        {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+        <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28"/></a>
+        {% endimage %}
+        <span class="slogan">Your Key to Success</span>
+        {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+        <ul id="menu">
+            <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+        </ul>
+        {% endimage %}
+        <div class="localization">
+            {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+            {% endimage %}
+        </div>
+        <div class="option">
+            <a href="{{ url('answerCategory') }}?category=pr" style="text-decoration: none; color: blue">Pr</a><br/>
+            <a href="{{ url('answerCategory') }}?category=автосервис" style="text-decoration: none; color: blue">Автосервис</a><br/>
+            <a href="{{ url('answerCategory') }}?category=агропром" style="text-decoration: none; color: blue">Агропром</a><br/>
+            <a href="{{ url('answerCategory') }}?category=аудит" style="text-decoration: none; color: blue">Аудит</a><br/>
+            <a href="{{ url('answerCategory') }}?category=банки" style="text-decoration: none; color: blue">Банки</a><br/>
+            <a href="{{ url('answerCategory') }}?category=безопасность" style="text-decoration: none; color: blue">Безопасность</a><br/>
+            <a href="{{ url('answerCategory') }}?category=ветеринария" style="text-decoration: none; color: blue">Ветеринария</a><br/>
+            <a href="{{ url('answerCategory') }}?category=вэд" style="text-decoration: none; color: blue">Вэд</a><br/>
+            <a href="{{ url('answerCategory') }}?category=госслужба" style="text-decoration: none; color: blue">Госслужба</a><br/>
+            <a href="{{ url('answerCategory') }}?category=гостиницы" style="text-decoration: none; color: blue">Гостиницы</a><br/>
+            <a href="{{ url('answerCategory') }}?category=дизайн" style="text-decoration: none; color: blue">Дизайн</a><br/>
+            <a href="{{ url('answerCategory') }}?category=жкх" style="text-decoration: none; color: blue">Жкх</a><br/>
+            <a href="{{ url('answerCategory') }}?category=издательства" style="text-decoration: none; color: blue">Издательства</a><br/>
+            <a href="{{ url('answerCategory') }}?category=инвестиции" style="text-decoration: none; color: blue">Инвестиции</a><br/>
+            <a href="{{ url('answerCategory') }}?category=интернет" style="text-decoration: none; color: blue">Интернет</a><br/>
+            <a href="{{ url('answerCategory') }}?category=искусство" style="text-decoration: none; color: blue">Искусство</a><br/>
+            <a href="{{ url('answerCategory') }}?category=кадры" style="text-decoration: none; color: blue">Кадры</a><br/>
+            <a href="{{ url('answerCategory') }}?category=консалтинг" style="text-decoration: none; color: blue">Консалтинг</a><br/>
+            <a href="{{ url('answerCategory') }}?category=красота" style="text-decoration: none; color: blue">Красота</a><br/>
+            <a href="{{ url('answerCategory') }}?category=культура" style="text-decoration: none; color: blue">Культура</a><br/>
+            <a href="{{ url('answerCategory') }}?category=логистика" style="text-decoration: none; color: blue">Логистика</a><br/>
+            <a href="{{ url('answerCategory') }}?category=медицина" style="text-decoration: none; color: blue">Медицина</a><br/>
+            <a href="{{ url('answerCategory') }}?category=наука" style="text-decoration: none; color: blue">Наука</a><br/>
+            <a href="{{ url('answerCategory') }}?category=недвижимость" style="text-decoration: none; color: blue">Недвижимость</a><br/>
+            <a href="{{ url('answerCategory') }}?category=образование" style="text-decoration: none; color: blue">Образование</a><br/>
+            <a href="{{ url('answerCategory') }}?category=питание" style="text-decoration: none; color: blue">Питание</a><br/>
+            <a href="{{ url('answerCategory') }}?category=полиграфия" style="text-decoration: none; color: blue">Полиграфия</a><br/>
+            <a href="{{ url('answerCategory') }}?category=продажи" style="text-decoration: none; color: blue">Продажи</a><br/>
+            <a href="{{ url('answerCategory') }}?category=проектирование" style="text-decoration: none; color: blue">Проектирование</a><br/>
+            <a href="{{ url('answerCategory') }}?category=производство" style="text-decoration: none; color: blue">Производство</a><br/>
+            <a href="{{ url('answerCategory') }}?category=промышленность" style="text-decoration: none; color: blue">Промышленность</a><br/>
+            <a href="{{ url('answerCategory') }}?category=развлечения" style="text-decoration: none; color: blue">Развлечения</a><br/>
+            <a href="{{ url('answerCategory') }}?category=ремонт" style="text-decoration: none; color: blue">Ремонт</a><br/>
+            <a href="{{ url('answerCategory') }}?category=рестораны" style="text-decoration: none; color: blue">Рестораны</a><br/>
+            <a href="{{ url('answerCategory') }}?category=секретариат" style="text-decoration: none; color: blue">Секретариат</a><br/>
+            <a href="{{ url('answerCategory') }}?category=склад" style="text-decoration: none; color: blue">Склад</a><br/>
+            <a href="{{ url('answerCategory') }}?category=сми" style="text-decoration: none; color: blue">Сми</a><br/>
+            <a href="{{ url('answerCategory') }}?category=снабжения" style="text-decoration: none; color: blue">Снабжения</a><br/>
+            <a href="{{ url('answerCategory') }}?category=страхование" style="text-decoration: none; color: blue">Страхование</a><br/>
+            <a href="{{ url('answerCategory') }}?category=строительство" style="text-decoration: none; color: blue">Строительство</a><br/>
+            <a href="{{ url('answerCategory') }}?category=сырье" style="text-decoration: none; color: blue">Сырье</a><br/>
+            <a href="{{ url('answerCategory') }}?category=телеком" style="text-decoration: none; color: blue">Телеком</a><br/>
+            <a href="{{ url('answerCategory') }}?category=торговля" style="text-decoration: none; color: blue">Торговля</a><br/>
+            <a href="{{ url('answerCategory') }}?category=транспорт" style="text-decoration: none; color: blue">Транспорт</a><br/>
+            <a href="{{ url('answerCategory') }}?category=тренинги" style="text-decoration: none; color: blue">Тренинги</a><br/>
+            <a href="{{ url('answerCategory') }}?category=туризм" style="text-decoration: none; color: blue">Туризм</a><br/>
+            <a href="{{ url('answerCategory') }}?category=фармация" style="text-decoration: none; color: blue">Фармация</a><br/>
+            <a href="{{ url('answerCategory') }}?category=финансы" style="text-decoration: none; color: blue">Финансы</a><br/>
+            <a href="{{ url('answerCategory') }}?category=фитнес" style="text-decoration: none; color: blue">Фитнес</a><br/>
+            <a href="{{ url('answerCategory') }}?category=юриспруденция" style="text-decoration: none; color: blue">Юриспруденция</a><br/>
+        </div>
+    </div>
+    {% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+    <div id="footer" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        Copyright &copy;. All rights reserved. Design by <a href="https://vk.com/active_11">Neymar</a> and <a
+                href="https://vk.com/id135256716"> Niko</a>
+    </div>
+{% endblock %}
+</body>
+</html>

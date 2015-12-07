@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}
+    {% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+    <div class="meta" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        <div class="metalinks">
+            {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+            {% endimage %}
+        </div>
+    </div>
+    <div id="header">
+        {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+        <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28"/></a>
+        {% endimage %}
+        <span class="slogan">Your Key to Success</span>
+        {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+        <ul id="menu">
+            <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+        </ul>
+        {% endimage %}
+        <div class="localization">
+            {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+            {% endimage %}
+        </div>
+        <div class="option">
+            <a href="{{ url('answerRegion') }}?region=ар крым" style="text-decoration: none; color: blue">AР Крым</a><br/>
+            <a href="{{ url('answerRegion') }}?region=винницкая область" style="text-decoration: none; color: blue">Винницкая область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=волынская область" style="text-decoration: none; color: blue">Волынская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=днепропетровская область" style="text-decoration: none; color: blue">Днепропетровкая Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=донецкая область" style="text-decoration: none; color: blue">Донецкая Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=житомирская область" style="text-decoration: none; color: blue">Житомирская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=закарпатская область" style="text-decoration: none; color: blue">Закарпатская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=запорожская область" style="text-decoration: none; color: blue">Запорожская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=ивано-франковская область" style="text-decoration: none; color: blue">Ивано-Франковская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=киевская область" style="text-decoration: none; color: blue">Киевская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=кировоградская область" style="text-decoration: none; color: blue">Кировоградская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=луганская область" style="text-decoration: none; color: blue">Луганская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=львовская область" style="text-decoration: none; color: blue">Львовская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=николаевская область" style="text-decoration: none; color: blue">Николаевская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=одесская область" style="text-decoration: none; color: blue">Одесская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=полтавская область" style="text-decoration: none; color: blue">Полтавская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=ровенская область" style="text-decoration: none; color: blue">Ровенская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=сумская область" style="text-decoration: none; color: blue">Сумская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=тернопольская область" style="text-decoration: none; color: blue">Тернопольская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=харьковская область" style="text-decoration: none; color: blue">Харьковская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=херсонская область" style="text-decoration: none; color: blue">Херсонская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=хмельницкая область" style="text-decoration: none; color: blue">Хмельницкая Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=черкасская область" style="text-decoration: none; color: blue">Черкасская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=черниговская область" style="text-decoration: none; color: blue">Черниговская Область</a><br/>
+            <a href="{{ url('answerRegion') }}?region=черновицкая область" style="text-decoration: none; color: blue">Черновицкая Область</a><br/>
+        </div>
+    </div>
+    {% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+    <div id="footer" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        Copyright &copy;. All rights reserved. Design by <a href="https://vk.com/active_11">Neymar</a> and <a
+                href="https://vk.com/id135256716"> Niko</a>
+    </div>
+{% endblock %}
+</body>
+</html>

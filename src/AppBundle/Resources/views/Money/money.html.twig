@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}
+{% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+<div class="meta" style="background-image:url({{ asset_url }});">
+    {% endimage %}
+    <div class="metalinks">
+        {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14" /></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14" /></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14" /></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14" /></a>
+        {% endimage %}
+    </div>
+</div>
+<div id="header">
+    {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+    <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28" /></a>
+    {% endimage %}
+    <span class="slogan">Your Key to Success</span>
+    {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+    <ul id="menu">
+        <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+        <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+        <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+    </ul>
+    {% endimage %}
+    <div class="localization">
+        {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+        {% endimage %}
+    </div>
+    <div class="option">
+        <h1>Любимая работа или высокий заработок?</h1>
+        Те, кто считает, что работа должна быть обязательно по призванию, могут возмутиться: «Как можно себя так не любить, чтобы поступить на нелюбимую работу?» Они считают, что каждый день должен приносить счастье и удовольствие. Но им тут же парируют те, кто любит быстро заработать, причем, неважно каким способом. Они утверждают, что человек всегда ищет место там, где ему лучше. Это можно заметить, когда в менеджеры по продажам идут бывшие учителя, наевшиеся мизерной зарплатой, когда геологи идут на должности риэлторов, которые никогда не останутся без работы, а следовательно, и без заработка. Но правило «золотой середины» почти никто не применяет, никто не ищет компромисс, когда бы работа нравилась и приносила достаточно большой доход.
+        В Японии, например, молодым специалистам дают подумать над тем, что им больше всего в жизни нравится и выбрать из этого списка ту профессию, которая бы приносила наибольшую прибыль. У нас все тривиальнее и проще: окончил университет – иди работай по специальности по распределению. И не важно, что эта профессия могла вам за годы учебы разонравиться, главное, чтобы все молодые специалисты были трудоустроены. Вот отсюда и стереотип, что работа – это, прежде всего долг (неважно кому – государству или семье), кусок хлеба и определенный статус. А хобби – это баловство какое-то…
+        </p><br/>
+        {% image '@AppBundle/Resources/public/images/coolest.jpg'  output='/images/coolest.jpg' %}
+        <img src="{{ asset_url }}" alt="" width="300" height="200"/>
+        {% endimage %}
+    </div>
+    </div>
+</div>
+{% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+<div id="footer" style="background-image:url({{ asset_url }});">
+    {% endimage %}
+    Copyright &copy;. All rights reserved. Design by <a href="https://vk.com/active_11">Neymar</a> and <a
+        href="https://vk.com/id135256716"> Niko</a>
+</div>
+{% endblock %}
+</body>
+</html>

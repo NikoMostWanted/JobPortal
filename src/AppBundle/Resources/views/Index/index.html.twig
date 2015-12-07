@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}
+    {% javascripts '@AppBundle/Resources/public/js/*' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+    <div class="meta" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        <div class="metalinks">
+            {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14" /></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14" /></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14" /></a>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14" /></a>
+            {% endimage %}
+        </div>
+    </div>
+    <div id="header">
+        {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+        <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28" /></a>
+        {% endimage %}
+        <span class="slogan">Your Key to Success</span>
+        {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+        <ul id="menu">
+            <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+            <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+        </ul>
+        {% endimage %}
+        <div class="localization">
+            {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+            <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+            {% endimage %}
+        </div>
+        {% image '@AppBundle/Resources/public/images/main.jpg'  output='/images/main.jpg' %}
+        <img src="{{ asset_url }}" alt="" width="940" height="303" />
+        {% endimage %}
+    </div>
+    <div id="content">
+        {% image '@AppBundle/Resources/public/images/search_bg.gif'  output='/images/search_bg.gif' %}
+        <div class="search" style="background-image:url({{ asset_url }});">
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/title.gif'  output='/images/title.gif' %}
+            <img src="{{ asset_url }}" alt="" width="90" height="30" />
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/button.gif'  output='/images/button.gif' %}
+            {{ form_start(form) }}
+                {{ form_errors(form) }}
+            <div >
+                {{ form_row(form.job) }}
+                {{ form_row(form.where) }}
+                {{ form_row(form.distance) }}
+                {{ form_row(form.search) }}
+            </div>
+            {{ form_end(form) }}
+            {% endimage %}
+        </div>
+        {% image '@AppBundle/Resources/public/images/blocks_bg.gif'  output='/images/blocks_bg.gif' %}
+        <div id="blocks" style="background-image:url({{ asset_url }});">
+            {% endimage %}
+        <div class="block">
+            <span class="text_blocks">Search vacancies by profession</span>
+            {% image '@AppBundle/Resources/public/images/vacancy.jpg'  output='/images/vacancy.jpg' %}
+            <img src="{{ asset_url }}" alt="" width="214" height="160" /><br />
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/morey.jpg'  output='/images/morey.jpg' %}
+            <a href="{{ url('byprofession') }}" class="more"><img src="{{ asset_url }}" alt="" width="105" height="27" /></a>
+            {% endimage %}
+        </div>
+        <div class="block">
+            <span class="text_blocks">Seach vacancies by regions</span>
+            {% image '@AppBundle/Resources/public/images/region.jpg'  output='/images/region.jpg' %}
+            <img src="{{ asset_url }}" alt="" width="214" height="160" /><br />
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/morer.jpg'  output='/images/morer.jpg' %}
+            <a href="{{ url('byregions') }}" class="more"><img src="{{ asset_url }}" alt="" width="105" height="27" /></a>
+            {% endimage %}
+        </div>
+        <div class="block">
+            <span class="text_blocks">Search vacancies by categories</span>
+            {% image '@AppBundle/Resources/public/images/category.jpg'  output='/images/category.jpg' %}
+            <img src="{{ asset_url }}" alt="" width="214" height="160" /><br />
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/morey.jpg'  output='/images/morey.jpg' %}
+            <a href="{{ url('bycategory') }}" class="more"><img src="{{ asset_url }}" alt="" width="106" height="27" /></a>
+            {% endimage %}
+        </div>
+        <div class="block">
+            <span class="text_blocks">The most popular profession</span>
+            {% image '@AppBundle/Resources/public/images/majors.jpg'  output='/images/majors.jpg' %}
+            <img src="{{ asset_url }}" alt="" width="214" height="160"/><br/>
+            {% endimage %}
+            {% image '@AppBundle/Resources/public/images/morey.jpg'  output='/images/morey.jpg' %}
+            <a href="" class="more"><img src ="{{ asset_url }}" alt="" width="106" height="27"/></a>
+            {% endimage %}
+        </div>
+        </div>
+        {% image '@AppBundle/Resources/public/images/bg2.gif'  output='/images/bg2.gif' %}
+        <div id="info" style="background-image:url({{ asset_url }});">
+            {% endimage %}
+            <div class="block">
+                <a href="{{ url('how') }}"><span class="text_blocks">Как правильно составить резюме?</span></a><hr color="yellow"><br/>
+                {% image '@AppBundle/Resources/public/images/how.jpg'  output='/images/how.jpg' %}
+                <img src="{{ asset_url }}" alt="" width="160" height="160"/><br/>
+                {% endimage %}
+            </div>
+            <div>
+                <a href="{{ url('team') }}"><span class="text_blocks">Что нужно знать о работе в команде?</span></a><hr color="red"><br/>
+                {% image '@AppBundle/Resources/public/images/team.jpg'  output='/images/team.jpg' %}
+                <img src="{{ asset_url }}" alt="" width="160" height="160"/><br/>
+                {% endimage %}
+            </div>
+            <div>
+                <a href="{{ url('money') }}"><span class="text_blocks">Высокая зарплата или любимая работа?</span></a><hr color="green"><br/>
+                {% image '@AppBundle/Resources/public/images/money.jpg'  output='/images/money.jpg' %}
+                <img src="{{ asset_url }}" alt="" width="160" height="160"/><br/>
+                {% endimage %}
+            </div>
+            <div>
+                <a href="{{ url('leisure') }}"><span class="text_blocks">Отдых - составляющая работы</span></a><hr color="grown"><br/>
+                {% image '@AppBundle/Resources/public/images/leisure.jpg'  output='/images/leisure.jpg' %}
+                <img src="{{ asset_url }}" alt="" width="160" height="160"/><br/>
+                {% endimage %}
+            </div>
+        </div>
+    </div>
+    {% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+    <div id="footer" style="background-image:url({{ asset_url }});">
+        {% endimage %}
+        Copyright &copy;. All rights reserved. Design by  <a href="https://vk.com/active_11">Neymar</a> and <a href="https://vk.com/id135256716"> Niko</a>
+    </div>
+{% endblock %}
+</body>
+</html>

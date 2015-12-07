@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% image '@AppBundle/Resources/public/images/bg.gif'  output='/images/bg.gif' %}
+<html style="background-image:url({{ asset_url }});" lang="en">
+{% endimage %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JOB Portal{% endblock %}</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}
+{% image '@AppBundle/Resources/public/images/meta_bg.gif'  output='/images/meta_bg.gif' %}
+<div class="meta" style="background-image:url({{ asset_url }});">
+    {% endimage %}
+    <div class="metalinks">
+        {% image '@AppBundle/Resources/public/images/meta1.gif'  output='/images/meta1.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta2.gif'  output='/images/meta2.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta3.gif'  output='/images/meta3.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="17" height="14"/></a>
+        {% endimage %}
+        {% image '@AppBundle/Resources/public/images/meta4.gif'  output='/images/meta4.gif' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="15" height="14"/></a>
+        {% endimage %}
+    </div>
+</div>
+<div id="header">
+    {% image '@AppBundle/Resources/public/images/logo.jpg'  output='/images/logo1.jpg' %}
+    <a href="{{ url('index') }}" class="logo"><img src="{{ asset_url }}" alt="setalpm" width="149" height="28"/></a>
+    {% endimage %}
+    <span class="slogan">Your Key to Success</span>
+    {% image '@AppBundle/Resources/public/images/line.gif'  output='/images/line.gif' %}
+    <ul id="menu">
+        <li style="background-image:url({{ asset_url }});"><a href="#">Регистрация</a></li>
+        <li style="background-image:url({{ asset_url }});"><a href="#">Авторизация</a></li>
+        <li style="background-image:url({{ asset_url }});"><a href="{{ url('contacts') }}">Контакты</a></li>
+    </ul>
+    {% endimage %}
+    <div class="localization">
+        {% image '@AppBundle/Resources/public/images/changel.jpg'  output='/images/changel.jpg' %}
+        <a href="#"><img src="{{ asset_url }}" alt="" width="40" height="40"/></a>
+        {% endimage %}
+    </div>
+    <div class="option">
+        <a href="{{ url('answerProfession') }}?letter=a" style="text-decoration: none; color: blue">A</a>
+        <a href="{{ url('answerProfession') }}?letter=b" style="text-decoration: none; color: blue">B</a>
+        <a href="{{ url('answerProfession') }}?letter=c" style="text-decoration: none; color: blue">C</a>
+        <a href="{{ url('answerProfession') }}?letter=d" style="text-decoration: none; color: blue">D</a>
+        <a href="{{ url('answerProfession') }}?letter=e" style="text-decoration: none; color: blue">E</a>
+        <a href="{{ url('answerProfession') }}?letter=f" style="text-decoration: none; color: blue">F</a>
+        <a href="{{ url('answerProfession') }}?letter=g" style="text-decoration: none; color: blue">G</a>
+        <a href="{{ url('answerProfession') }}?letter=h" style="text-decoration: none; color: blue">H</a>
+        <a href="{{ url('answerProfession') }}?letter=i" style="text-decoration: none; color: blue">I</a>
+        <a href="{{ url('answerProfession') }}?letter=j" style="text-decoration: none; color: blue">J</a>
+        <a href="{{ url('answerProfession') }}?letter=l" style="text-decoration: none; color: blue">L</a>
+        <a href="{{ url('answerProfession') }}?letter=m" style="text-decoration: none; color: blue">M</a>
+        <a href="{{ url('answerProfession') }}?letter=n" style="text-decoration: none; color: blue">N</a>
+        <a href="{{ url('answerProfession') }}?letter=o" style="text-decoration: none; color: blue">O</a>
+        <a href="{{ url('answerProfession') }}?letter=p" style="text-decoration: none; color: blue">P</a>
+        <a href="{{ url('answerProfession') }}?letter=r" style="text-decoration: none; color: blue">R</a>
+        <a href="{{ url('answerProfession') }}?letter=s" style="text-decoration: none; color: blue">S</a>
+        <a href="{{ url('answerProfession') }}?letter=u" style="text-decoration: none; color: blue">U</a>
+        <a href="{{ url('answerProfession') }}?letter=v" style="text-decoration: none; color: blue">V</a>
+        <a href="{{ url('answerProfession') }}?letter=w" style="text-decoration: none; color: blue">W</a>
+        <a href="{{ url('answerProfession') }}?letter=а" style="text-decoration: none; color: blue">А</a>
+        <a href="{{ url('answerProfession') }}?letter=б" style="text-decoration: none; color: blue">Б</a>
+        <a href="{{ url('answerProfession') }}?letter=в" style="text-decoration: none; color: blue">В</a>
+        <a href="{{ url('answerProfession') }}?letter=г" style="text-decoration: none; color: blue">Г</a>
+        <a href="{{ url('answerProfession') }}?letter=д" style="text-decoration: none; color: blue">Д</a>
+        <a href="{{ url('answerProfession') }}?letter=ж" style="text-decoration: none; color: blue">Ж</a>
+        <a href="{{ url('answerProfession') }}?letter=з" style="text-decoration: none; color: blue">З</a>
+        <a href="{{ url('answerProfession') }}?letter=и" style="text-decoration: none; color: blue">И</a>
+        <a href="{{ url('answerProfession') }}?letter=к" style="text-decoration: none; color: blue">К</a>
+        <a href="{{ url('answerProfession') }}?letter=л" style="text-decoration: none; color: blue">Л</a>
+        <a href="{{ url('answerProfession') }}?letter=м" style="text-decoration: none; color: blue">М</a>
+        <a href="{{ url('answerProfession') }}?letter=н" style="text-decoration: none; color: blue">Н</a>
+        <a href="{{ url('answerProfession') }}?letter=о" style="text-decoration: none; color: blue">О</a>
+        <a href="{{ url('answerProfession') }}?letter=п" style="text-decoration: none; color: blue">П</a>
+        <a href="{{ url('answerProfession') }}?letter=р" style="text-decoration: none; color: blue">Р</a>
+        <a href="{{ url('answerProfession') }}?letter=с" style="text-decoration: none; color: blue">С</a>
+        <a href="{{ url('answerProfession') }}?letter=т" style="text-decoration: none; color: blue">Т</a>
+        <a href="{{ url('answerProfession') }}?letter=у" style="text-decoration: none; color: blue">У</a>
+        <a href="{{ url('answerProfession') }}?letter=ф" style="text-decoration: none; color: blue">Ф</a>
+        <a href="{{ url('answerProfession') }}?letter=х" style="text-decoration: none; color: blue">Х</a>
+        <a href="{{ url('answerProfession') }}?letter=ч" style="text-decoration: none; color: blue">Ч</a>
+        <a href="{{ url('answerProfession') }}?letter=ш" style="text-decoration: none; color: blue">Ш</a>
+        <a href="{{ url('answerProfession') }}?letter=э" style="text-decoration: none; color: blue">Э</a>
+        <a href="{{ url('answerProfession') }}?letter=ю" style="text-decoration: none; color: blue">Ю</a>
+    </div>
+</div>
+{% image '@AppBundle/Resources/public/images/footer_bg.gif'  output='/images/footer_bg.gif' %}
+<div id="footer" style="background-image:url({{ asset_url }});">
+    {% endimage %}
+    Copyright &copy;. All rights reserved. Design by <a href="https://vk.com/active_11">Neymar</a> and <a
+        href="https://vk.com/id135256716"> Niko</a>
+</div>
+{% endblock %}
+</body>
+</html>
